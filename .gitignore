@@ -1,0 +1,30 @@
+# Python caches and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local secrets and editor settings
+.env
+.env.*
+.claude/
+.vscode/
+
+# Local model and build artifacts
+*.log
+*.tmp
+dist/
+build/
+*.egg-info/
+
+# Generated ad-hoc outputs
+examples/*_new.json
+examples/*_new.md

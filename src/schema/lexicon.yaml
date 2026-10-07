@@ -1,0 +1,146 @@
+# Manually written term mappings used by the rules-based extractor
+# Maps terms to schema IDs for concepts, constructs, and objection categories
+
+concepts:
+  # Generics
+  "generic": {id: "concept-generics", category: "generics"}
+  "generics": {id: "concept-generics", category: "generics"}
+  "type variable": {id: "concept-generics", category: "generics"}
+  "type variables": {id: "concept-generics", category: "generics"}
+  "typevar": {id: "concept-generics", category: "generics", construct_id: "construct-typevar"}
+  "typevar tuple": {id: "concept-variadic-generics", category: "variadic_generics", construct_id: "construct-typevar-tuple"}
+  "typevartuple": {id: "concept-variadic-generics", category: "variadic_generics", construct_id: "construct-typevar-tuple"}
+  "unpack": {id: "concept-variadic-generics", category: "variadic_generics", construct_id: "construct-unpack"}
+  "variadic generics": {id: "concept-variadic-generics", category: "variadic_generics"}
+  "parameter specification": {id: "concept-parameter-specification", category: "parameter_specification", construct_id: "construct-paramspec"}
+  "paramspec": {id: "concept-parameter-specification", category: "parameter_specification", construct_id: "construct-paramspec"}
+  "concatenate": {id: "concept-parameter-specification", category: "parameter_specification", construct_id: "construct-concatenate"}
+  "default type parameter": {id: "concept-generics", category: "generics", construct_id: "construct-type-param-default"}
+  "type parameter syntax": {id: "concept-generics", category: "generics", construct_id: "construct-type-param"}
+  "type param": {id: "concept-generics", category: "generics", construct_id: "construct-type-param"}
+  "self type": {id: "concept-self-type", category: "self_type", construct_id: "construct-self"}
+
+  # Structural Subtyping
+  "structural subtyping": {id: "concept-structural-subtyping", category: "structural_subtyping"}
+  "protocol": {id: "concept-structural-subtyping", category: "structural_subtyping", construct_id: "construct-protocol"}
+  "protocols": {id: "concept-structural-subtyping", category: "structural_subtyping", construct_id: "construct-protocol"}
+  "runtime checkable": {id: "concept-runtime-introspection", category: "runtime_introspection", construct_id: "construct-runtime-checkable"}
+  "@runtime_checkable": {id: "concept-runtime-introspection", category: "runtime_introspection", construct_id: "construct-runtime-checkable"}
+
+  # Gradual Typing
+  "gradual typing": {id: "concept-gradual-typing", category: "gradual_typing"}
+  "type hints": {id: "concept-gradual-typing", category: "gradual_typing", construct_id: "construct-typing-module"}
+  "typing module": {id: "concept-gradual-typing", category: "gradual_typing", construct_id: "construct-typing-module"}
+  "type hint": {id: "concept-gradual-typing", category: "gradual_typing"}
+
+  # Union Syntax
+  "union": {id: "concept-union-syntax", category: "union_syntax", construct_id: "construct-union"}
+  "union type": {id: "concept-union-syntax", category: "union_syntax", construct_id: "construct-union"}
+  "optional": {id: "concept-union-syntax", category: "union_syntax", construct_id: "construct-optional"}
+  "x | y": {id: "concept-union-syntax", category: "union_syntax", construct_id: "construct-union-pipe"}
+  "pipe syntax": {id: "concept-union-syntax", category: "union_syntax", construct_id: "construct-union-pipe"}
+
+  # Literal Types
+  "literal type": {id: "concept-literal-types", category: "literal_types", construct_id: "construct-literal"}
+  "literal": {id: "concept-literal-types", category: "literal_types", construct_id: "construct-literal"}
+  "literal string": {id: "concept-literal-types", category: "literal_types", construct_id: "construct-literal-string"}
+
+  # TypedDict
+  "typeddict": {id: "concept-typeddict", category: "typeddict", construct_id: "construct-typeddict"}
+  "required": {id: "concept-typeddict", category: "typeddict", construct_id: "construct-required"}
+  "notrequired": {id: "concept-typeddict", category: "typeddict", construct_id: "construct-notrequired"}
+  "typed extra items": {id: "concept-typeddict", category: "typeddict", construct_id: "construct-typed-extra"}
+
+  # Type Narrowing
+  "type guard": {id: "concept-type-narrowing", category: "type_narrowing", construct_id: "construct-typeguard"}
+  "typeguard": {id: "concept-type-narrowing", category: "type_narrowing", construct_id: "construct-typeguard"}
+  "type is": {id: "concept-type-narrowing", category: "type_narrowing", construct_id: "construct-typeis"}
+  "typeis": {id: "concept-type-narrowing", category: "type_narrowing", construct_id: "construct-typeis"}
+  "type form": {id: "concept-type-narrowing", category: "type_narrowing", construct_id: "construct-typeform"}
+  "typeform": {id: "concept-type-narrowing", category: "type_narrowing", construct_id: "construct-typeform"}
+
+  # Qualifiers
+  "final": {id: "concept-finality", category: "finality", construct_id: "construct-final"}
+  "@final": {id: "concept-finality", category: "finality", construct_id: "construct-final-decorator"}
+  "override": {id: "concept-overrides", category: "overrides", construct_id: "construct-override"}
+  "@override": {id: "concept-overrides", category: "overrides", construct_id: "construct-override-decorator"}
+
+  # Annotation Evaluation
+  "postponed evaluation": {id: "concept-annotation-evaluation", category: "annotation_syntax", construct_id: "construct-future-annotations"}
+  "future annotations": {id: "concept-annotation-evaluation", category: "annotation_syntax", construct_id: "construct-future-annotations"}
+  "deferred evaluation": {id: "concept-annotation-evaluation", category: "annotation_syntax", construct_id: "construct-deferred-eval"}
+  "descriptor": {id: "concept-annotation-evaluation", category: "annotation_syntax", construct_id: "construct-descriptor"}
+  "pep 563": {id: "concept-annotation-evaluation", category: "annotation_syntax"}
+  "pep 649": {id: "concept-annotation-evaluation", category: "annotation_syntax"}
+  "pep 749": {id: "concept-annotation-evaluation", category: "annotation_syntax"}
+
+  # Standard Collections
+  "list[int]": {id: "concept-generics", category: "generics", construct_id: "construct-builtin-generics"}
+  "dict[str, int]": {id: "concept-generics", category: "generics", construct_id: "construct-builtin-generics"}
+  "builtin generics": {id: "concept-generics", category: "generics", construct_id: "construct-builtin-generics"}
+
+  # Variable Annotations
+  "variable annotation": {id: "concept-annotation-syntax", category: "annotation_syntax", construct_id: "construct-var-annotation"}
+  "classvar": {id: "concept-annotation-syntax", category: "annotation_syntax", construct_id: "construct-classvar"}
+  "initvar": {id: "concept-annotation-syntax", category: "annotation_syntax", construct_id: "construct-initvar"}
+
+  # Callable
+  "callable": {id: "concept-generics", category: "generics", construct_id: "construct-callable"}
+  "callable syntax": {id: "concept-generics", category: "generics", construct_id: "construct-callable-syntax"}
+
+  # Annotated
+  "annotated": {id: "concept-type-aliases", category: "type_aliases", construct_id: "construct-annotated"}
+
+  # Type Alias
+  "type alias": {id: "concept-type-aliases", category: "type_aliases", construct_id: "construct-typealias"}
+  "explicit type alias": {id: "concept-type-aliases", category: "type_aliases", construct_id: "construct-typealias"}
+
+  # Dataclass Transform
+  "dataclass transform": {id: "concept-dataclass-transform", category: "dataclass_transform", construct_id: "construct-dataclass-transform"}
+  "@dataclass_transform": {id: "concept-dataclass-transform", category: "dataclass_transform", construct_id: "construct-dataclass-transform"}
+
+  # Kwargs
+  "typed kwargs": {id: "concept-typeddict", category: "typeddict", construct_id: "construct-unpack-typeddict"}
+  "unpack typeddict": {id: "concept-typeddict", category: "typeddict", construct_id: "construct-unpack-typeddict"}
+
+objections:
+  "runtime cost": "runtime_cost"
+  "performance impact": "runtime_cost"
+  "performance overhead": "runtime_cost"
+  "too complex": "complexity"
+  "complexity": "complexity"
+  "overly complex": "complexity"
+  "breaks backwards compatibility": "backwards_compat"
+  "backwards compatibility": "backwards_compat"
+  "backward compatibility": "backwards_compat"
+  "breaking change": "backwards_compat"
+  "ambiguous": "ambiguity"
+  "ambiguity": "ambiguity"
+  "implementation burden": "implementation_burden"
+  "implementation difficulty": "implementation_burden"
+  "hard to implement": "implementation_burden"
+  "learning curve": "learning_curve"
+  "steep learning curve": "learning_curve"
+  "ecosystem fragmentation": "ecosystem_fragmentation"
+  "fragmentation": "ecosystem_fragmentation"
+  "expressiveness": "expressiveness"
+  "not expressive enough": "expressiveness"
+  "safety": "safety"
+  "type safety": "safety"
+  "runtime introspection": "runtime_introspection"
+  "forward reference": "annotation_syntax"
+  "string annotation": "annotation_syntax"
+
+arguments:
+  "gradual adoption": {category: "compatibility", stance: "pro"}
+  "static analysis": {category: "expressiveness", stance: "pro"}
+  "readability": {category: "ergonomics", stance: "pro"}
+  "ergonomics": {category: "ergonomics", stance: "pro"}
+  "expressiveness": {category: "expressiveness", stance: "pro"}
+  "type safety": {category: "safety", stance: "pro"}
+  "compatibility": {category: "compatibility", stance: "pro"}
+  "backwards compatible": {category: "compatibility", stance: "pro"}
+  "performance": {category: "performance", stance: "pro"}
+  "runtime cost": {category: "performance", stance: "con"}
+  "complexity": {category: "complexity", stance: "con"}
+  "breaking change": {category: "compatibility", stance: "con"}
